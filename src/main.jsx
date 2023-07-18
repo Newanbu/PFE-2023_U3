@@ -11,6 +11,7 @@ import Calama from "./components/Calama.jsx";
 import Contador from './components/contador.jsx';
 import Pais from './components/pais.jsx'
 import Cambio from './components/Nombre.jsx';
+import Ejercicio1 from './components/ejercicio01/Ejercicio1.jsx';
 
 const router = createBrowserRouter(
     [
@@ -37,6 +38,10 @@ const router = createBrowserRouter(
         {
             path:"/nombre",
             element:<Cambio/>
+        },
+        {
+            path:"/ejercicio",
+            element:<Ejercicio1/>
         }
     ]
 )
