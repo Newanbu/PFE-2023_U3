@@ -8,6 +8,9 @@ import {
 import './index.css'
 import HolaMundo from "./components/HolaMundo.jsx";
 import Calama from "./components/Calama.jsx";
+import Contador from './components/contador.jsx';
+import Pais from './components/pais.jsx'
+import Cambio from './components/Nombre.jsx';
 
 const router = createBrowserRouter(
     [
@@ -22,6 +25,18 @@ const router = createBrowserRouter(
         {
             path: "/ciudad",
             element: <Calama/>
+        },
+        {
+            path: "/contador",
+            element: <Contador/>
+        },
+        {
+            path:"/pais",
+            element:<Pais/>
+        },
+        {
+            path:"/nombre",
+            element:<Cambio/>
         }
     ]
 )
