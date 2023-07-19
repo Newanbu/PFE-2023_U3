@@ -12,6 +12,7 @@ import Contador from './components/contador.jsx';
 import Pais from './components/pais.jsx'
 import Cambio from './components/Nombre.jsx';
 import Ejercicio1 from './components/ejercicio01/Ejercicio1.jsx';
+import RegistrosTienda from './components/ejercicio01/ejercicio2.jsx';
 
 const router = createBrowserRouter(
     [
@@ -42,6 +43,10 @@ const router = createBrowserRouter(
         {
             path:"/ejercicio",
             element:<Ejercicio1/>
+        },
+        {
+            path:'/tienda',
+            element:<RegistrosTienda/>
         }
     ]
 )
