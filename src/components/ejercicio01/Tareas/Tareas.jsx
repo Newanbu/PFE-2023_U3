@@ -16,7 +16,7 @@ const Tareas = () => {
     }
     const handleBotonAgregarTarea = (evento) => {
         if(nombreTarea === ''){
-            alert('agrega una tarea')
+            alert('Agrega Una Tarea')
         }else{
             let tareanueva = {
                 ID: tareas.length + 1,
@@ -37,37 +37,46 @@ const Tareas = () => {
 
      return(
         <>
-        <div className="row">
-            <div className="col-12">
-                <h1 className="display-6">Tareas</h1>
-            </div>
-            <div className="col-12">
-                <label htmlFor="Nombre-Tarea">Ingresa Una Tarea <span className='me-2'></span></label><br/>
-                <input className='form-label rounded-3' type="text" id='Nombre-Tarea' value={nombreTarea} onChange={handleModificarTarea}/>
-                <br />
-                <button type='submit' className='btn btn-primary' onClick={handleBotonAgregarTarea}>Añadir</button>
-            </div>
-            <div className="col-12">
-                <h1>Lista de tareas</h1>
-                <div className="col-12 border border-1 text-info">
-                <ul className='list-group'>
+            <div className="row">
+                <div className="col-sm-6">
+                    <div className="card">
+                        <div className="card-body">
+                            <h5 className="card-title">Tareas</h5>
+                            <label htmlFor="Nombre-Tarea">Ingresa Una Tarea <span className='me-2'></span></label><br/>
+                            <button type='submit' className='btn btn-primary mx-2' onClick={handleBotonAgregarTarea}>Añadir</button>
+                            <input className='form-label rounded-3' type="text" id='Nombre-Tarea' value={nombreTarea} onChange={handleModificarTarea}/>
 
-                        {tareas.map( function (tarea){
-                            return  (
-                                <>
-                                    <li className='list-group-item' key={tarea.ID}>{tarea.Tarea}<span className='m-2'></span><button className='btn btn-outline-secondary' onClick={() => handleBorrarTarea(tarea.ID)}>Borrar</button></li>
-                                </>
-                            )
-                        })
+                        </div>
+                    </div>
+                </div>
+                <div className="col-sm-6">
+                    <div className="card">
+                        <div className="card-body">
+                            <h5 className="card-title">Lista De Tareas</h5>
+                            <p className="card-text"></p>
+                            <ul className='list-group'>
 
-                        }
+                                {tareas.map( function (tarea){
+                                    return  (
+                                        <>
+                                            <li className='list-group-item' key={tarea.ID}>{tarea.Tarea}<span className='m-2'></span><button className='btn btn-outline-secondary' onClick={() => handleBorrarTarea(tarea.ID)}>Borrar</button></li>
+                                        </>
+                                    )
+                                })
 
-                </ul>
+                                }
+
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
         </>
     )
 }
+
+
+
+
 
 export default Tareas
