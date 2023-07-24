@@ -5,14 +5,16 @@ import {
     createBrowserRouter,
     RouterProvider
 } from "react-router-dom";
-import './index.css'
 import HolaMundo from "./components/HolaMundo.jsx";
 import Calama from "./components/Calama.jsx";
 import Contador from './components/contador.jsx';
 import Pais from './components/pais.jsx'
 import Cambio from './components/Nombre.jsx';
 import Ejercicio1 from './components/ejercicio01/Ejercicio1.jsx';
+import Tareas from './components/ejercicio01/Tareas/Tareas.jsx';
 import RegistrosTienda from './components/ejercicio01/ejercicio2.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 const router = createBrowserRouter(
     [
@@ -47,6 +49,10 @@ const router = createBrowserRouter(
         {
             path:'/tienda',
             element:<RegistrosTienda/>
+        },
+        {
+            path:'/Tarea',
+            element:<Tareas/>
         }
     ]
 )
