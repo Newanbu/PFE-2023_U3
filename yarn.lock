@@ -1225,6 +1225,11 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+host@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/host/-/host-0.0.1.tgz#e67a0955431775095d9046282aa214091802eeff"
+  integrity sha512-7XyNhoIkpS49Yjx5MKbiTfA5BywUz+Zp4Spq9/UDLdcj96Vs76sV+NKop7Dn/9eoRf8YVXOA7l3ndw4peUJ63Q==
+
 ignore@^5.2.0:
   version "5.2.4"
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.2.4.tgz"
